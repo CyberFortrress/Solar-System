@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#061c17">
+  <title>Solar System | Campus Energy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#dashboard" aria-label="Solar System dashboard"><span class="brand-mark">☼</span><span><b>Solar System</b><small>Campus Energy Management</small></span></a>
+      <div class="nav-label">القائمة الرئيسية</div>
+      <nav class="nav-links">
+        <a href="#dashboard" data-page="dashboard" class="nav-link active"><span class="nav-icon">⌂</span>نظرة عامة</a>
+        <a href="#buildings" data-page="buildings" class="nav-link"><span class="nav-icon">▦</span>المباني</a>
+        <a href="#panels" data-page="panels" class="nav-link"><span class="nav-icon">▧</span>الألواح الشمسية</a>
+        <a href="#batteries" data-page="batteries" class="nav-link"><span class="nav-icon">▣</span>البطاريات</a>
+        <a href="#weather" data-page="weather" class="nav-link"><span class="nav-icon">☀</span>الطقس والتوقعات</a>
+        <a href="#reports" data-page="reports" class="nav-link"><span class="nav-icon">▤</span>التقارير</a>
+      </nav>
+      <div class="sidebar-bottom"><a href="#settings" data-page="settings" class="nav-link"><span class="nav-icon">⚙</span>الإعدادات</a><div class="sidebar-profile"><div class="avatar sidebar-avatar"><svg viewBox="0 0 48 48" role="img" aria-label="Ahmed"><circle cx="24" cy="24" r="23" fill="#f8faf8"/><path d="M4 47c1.8-10.4 8.2-15.5 20-15.5S42.2 36.6 44 47" fill="#203f32"/><path d="m17 33 7 9 7-9-3.8-3.4h-6.4z" fill="#f5f7f5"/><path d="m21.4 34.5 2.6 6 2.6-6-2.6-2.3z" fill="#6e9e70"/><path d="M21 29h6v5.5h-6z" fill="#b77a5d"/><path d="M16.5 18.2c0-7.1 3-10.8 7.5-10.8s7.5 3.7 7.5 10.8v6c0 5.2-3.2 8.1-7.5 8.1s-7.5-2.9-7.5-8.1z" fill="#c58a6a"/><path d="M16.4 20.2c-2-8 1.6-14.8 8.3-14.8 7.7 0 10.4 6 7.5 14.4l-1.5-2.3-.4-5.5c-4.3.8-8.1-.1-11-2.8-.3 4.1-1.3 7.2-2.9 9.3z" fill="#283a31"/><path d="M17 16.5c-.8-2.1-.3-4.5 1.2-6.2m12.4 1.2c1.1 1.7 1.5 3.6 1.1 5.7" fill="none" stroke="#35483e" stroke-width="1.2" stroke-linecap="round"/></svg></div><div class="sidebar-profile-copy"><b>Ahmed</b><small id="roleLabel">مشرف النظام</small></div><span class="profile-more">···</span></div></div>
+    </aside>
+    <main class="main-area">
+      <header class="topbar"><button class="mobile-menu" id="menuToggle" aria-label="القائمة">☰</button><div class="crumb"><a id="homeLink" href="#dashboard">الرئيسية</a><i>/</i><b id="pageCrumb">نظرة عامة</b></div><span class="live-status"><span class="pulse"></span><span id="systemStatus">النظام يعمل</span></span><div class="top-actions"><button class="lang-toggle" id="langToggle" aria-label="Switch language">EN</button><button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"></button></div></header>
+      <div class="page-wrap" id="pageContent"></div>
+      <footer class="footer"><span id="footerCaption">لوحة متابعة الطاقة الشمسية</span></footer>
+    </main>
+  </div>
+  <div id="modalRoot"></div>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
